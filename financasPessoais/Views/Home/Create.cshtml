@@ -1,0 +1,41 @@
+﻿@model financasPessoais.Models.despesas
+@{
+    ViewBag.Title = "Criar Despesa";
+}
+
+<h2>Adicionar Despesa</h2>
+
+<div class="panel">
+    <form action="/Home/Create" method="post">
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" placeholder="Id da despesa" type="number" id="Id" name="Id" />
+
+        </div>
+        <div class="form-group">
+            <label>local</label>
+            <input class="form-control" placeholder="local da despesa" type="text" id="local" name="local" />
+        </div>
+        <div class="form-group">
+            <label>data</label>
+            <input class="form-control" placeholder="data da despesa" type="date" id="data" name="data" />
+        </div>
+        <div class="form-group">
+            <label>valor</label>
+            <input class="form-control" placeholder="valor da despesa" type="number" id="valor" name="valor" />
+        </div>
+
+        <div class="form-group">
+            <label>Classificacao</label>
+            <SELECT NAME="classificacao" SIZE="5" MULTIPLE>
+                <OPTION SELECTED>Mercado
+                <OPTION>Farmacia
+                <OPTION>Imposto
+                <OPTION>COmbustivel
+                <OPTION>Alimentacao
+</SELECT>
+        </div>
+
+        <button class="btn btn-default" type="submit">Salvar</button>
+    </form>
+</div>
